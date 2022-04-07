@@ -2,57 +2,21 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 </head>
 
 <body>
-    <h1 id="NoScope">
-        HEAD
-    </h1>
 
-    <p><strong>Bold</strong></p>
+    <button id="custom-button" onclick="myFunction()"
+        style="color: rgb(255, 255, 255); width: 1920px; height: 1080px; background-color: #000000; font-size: xx-large;">
+        Don't Click me.
+    </button>
 
-    <p><del>Cross Word</del></p>
-
-    <p><code>Code</code></p>
-
-    <p><em>Italic</em></p>
-
-    <p>&gt;</p>
-
-    <blockquote>
-
-        <details>
-            <summary>Don&#39;t Click</summary>
-
-            Never Gonna Give You Up
-
-        </details>
-
-        <pre><code class="lang-bash"><span class="hljs-keyword">code</span> <span class="hljs-keyword">class</span> init
-    </code></pre>
-
-
-        <p><img src="https://cdn.discordapp.com/attachments/870655747053195265/871070489395757056/test.png?size=128"
-                alt="Image"></p>
-
-        <div align="center">
-            CENTER
-        </div>
-
-        <button class="btn btn-1">
-            Nice Button 1
-        </button>
-
-        <button class="btn btn-2">
-            Nice Button 2
-        </button>
-
-        <button class="btn btn-3">
-            Nice Button 3
-        </button>
-
-        <p style="color:red;">paragraph in in line css</p>
+    <script>
+        function myFunction() {
+            document.getElementById("custom-button").outerHTML = '<p> <iframe width="1920" height="1080" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe> <h1>Auto Play Get Mute BRUH</h1> <a href="https://www.youtube.com/watch?v=fujCdB93fpw&t=0s">Click Me To Go To Test Area</a> </p>';
+        }
+    </script>
 
 </body>
 
