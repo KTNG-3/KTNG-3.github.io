@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@ing3kth/val-api Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../docs.css">
+</head>
+
+<body>
+
+    <h1>Valorant Client API</h1>
+    <hr>
+
+    <h3>Authentication</h3>
+
+    <p>First We Need To <strong>Login</strong> To <code id="code_small">Valorant Account</code></p>
+
+    <code class="language-javascript" id="code_full">
+        const ValAuth_Account = await ValApi.Auth.Account.login('USERNAME', 'PASSWORD');
+    </code>
+
+    <em>But We Have 2 Type Of Account</em>
+
+    <h4>Multi-Factor Authentication</h4>
+
+    <p>When The Account Have <strong>Multifactor</strong> You Can't Use Normal Method</p>
+
+    <p>After Login The <strong>Verify Code</strong> Will Send To Mail</p>
+
+    <code class="language-javascript" id="code_full">
+        const VerifyCode = 123456;<span class="hljs-comment"> // &#60;---------- Example Verify Code</span>
+        <br>
+        const ValAuth_Multifactor = await ValApi.Auth.Multifactor.verify(ValAuth_Account, VerifyCode);
+    </code>
+
+    <h2>Client</h2>
+    <hr>
+
+    <p>After We Get <strong>Account</strong>, Then We Will Create an <strong>API Client</strong></p>
+
+    <pre class="lang-javascript" id="code_full">
+const ValAPI_Client = new ValApi.ValClient({
+    Account: ValAuth_Multifactor,<span class="hljs-comment">  // Use <em>ValAuth_Account</em> When It Isn't use Multifactor</span>
+    Region: "ap",<span class="hljs-comment">  // &#60;---------- Example Region</span>
+});</pre>
+
+
+    <details>
+        <summary style="font-size: x-large;">Settings</summary>
+
+        <blockquote>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Set</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Region</td>
+                        <td>setRegion<em>(region)</em></td>
+                    </tr>
+                    <tr>
+                        <td>Client&nbsp;Platfrom</td>
+                        <td>setClientPlatfrom_fromJSON<em>(clientPlatfrom)</em></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>setClientPlatfrom_from64<em>(clientPlatfrom)</em></td>
+                    </tr>
+                    <tr>
+                        <td>Client&nbsp;Version</td>
+                        <td>setClientVersion<em>(clientVersion)</em></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <code class="language-javascript" id="code_full">
+                ValAPI_Client.{Function}
+            </code>
+
+        </blockquote>
+
+    </details>
+
+    <details>
+        <summary style="font-size: x-large;">Saves</summary>
+
+        <blockquote>
+            <strong>Account &#8594; Save</strong>
+
+            <code class="language-javascript" id="code_full">
+                const Save_ValClientAPI = ValAPI_Client.toJSON();
+            </code>
+
+            <strong>Save &#8594; Account</strong>
+
+            <code class="language-javascript" id="code_full">
+                const ValAPI_Client = ValApi.ValClient.fromJSON(Save_ValClientAPI);
+            </code>
+        </blockquote>
+
+    </details>
+
+    <h2>API</h2>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Function</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Client</td>
+                <td>GetSession(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchContent()</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchConfig()</td>
+            </tr>
+            <tr>
+                <td>Contract</td>
+                <td>DefinitionsFetch()</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Fetch(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Activate(puuid, contractId)</td>
+            </tr>
+            <tr>
+                <td>CurrentGame</td>
+                <td>FetchMatch(matchId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchMatchLoadouts(matchId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchPlayer(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>DisassociatePlayer(puuid, matchId)</td>
+            </tr>
+            <tr>
+                <td>Match</td>
+                <td>FetchMatchDetails(matchId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchMatchHistory(puuid,&nbsp;queueId?,&nbsp;startIndex?,&nbsp;endIndex?)</td>
+            </tr>
+            <tr>
+                <td>Party</td>
+                <td>FetchCustomGameConfigs()</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchParty(partyId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchPlayer(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ChangeQueue(partyId,&nbsp;queueId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>EnterMatchmakingQueue(partyId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>InviteToPartyByDisplayName(partyId,&nbsp;gameName,&nbsp;tagLine)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LeaveMatchmakingQueue(partyId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>SetAccessibility(partyId,&nbsp;accessibility)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>StartCustomGame(partyId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LeaveParty(puuid,&nbsp;partyId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LeaveQueue(partyId)</td>
+            </tr>
+            <tr>
+                <td>Player</td>
+                <td>GetUsername(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetUserInfo()</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchPlayer(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchCompetitiveUpdates(puuid,&nbsp;queueId?,&nbsp;startIndex?,&nbsp;endIndex?)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Loadout(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>AccountXP(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FetchRestrictions()</td>
+            </tr>
+            <tr>
+                <td>PreGame</td>
+                <td>GetMatch(matchId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetMatchLoadouts(matchId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetPlayer(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LockCharacter(matchId,&nbsp;agentId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>QuitMatch(matchId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>SelectCharacter(matchId,&nbsp;agentId)</td>
+            </tr>
+            <tr>
+                <td>Store</td>
+                <td>GetEntitlements(puuid,&nbsp;itemTypeId)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetOffers()</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetStorefront(puuid)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetWallet(puuid)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <code class="language-javascript" id="code_full">
+        await ValAPI_Client.{Service}.{Function}
+    </code>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <title>Ing Project</title>
 
 <head>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 </head>
 
@@ -23,6 +23,8 @@
 
     <p><em>Italic</em></p>
 
+    <p><u>Underline</u></p>
+
     <p>&gt;</p>
 
     <blockquote>
@@ -36,8 +38,7 @@
 
         </details>
 
-        <pre><code class="lang-bash"><span class="hljs-keyword">code</span> <span class="hljs-keyword">class</span> init
-    </code></pre>
+        <pre><code class="lang-bash"><span class="hljs-keyword">code</span> <span class="hljs-keyword">class</span> init</code></pre>
 
     </blockquote>
 
@@ -79,19 +80,6 @@
         Custom Slider
         <input type="range" min="1" max="100000" value="69420" class="slider" id="myRange">
     </div>
-
-    <ol>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-    </ol>
-
-    <dl>
-        <dt>Coffee</dt>
-        <dd>- black hot drink</dd>
-        <dt>Milk</dt>
-        <dd>- white cold drink</dd>
-    </dl>
 
     &nbsp;
 
@@ -148,8 +136,27 @@
         </ul>
     </ul>
 
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item
+          <ol>
+            <li>Indented item</li>
+            <li>Indented item</li>
+          </ol>
+        </li>
+        <li>Fourth item</li>
+    </ol>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
 </body>
 
-<script src="index.js"></script>
+<script src="main.js"></script>
 
 </html>
