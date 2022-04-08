@@ -1,5 +1,5 @@
 //include html
-function includeHTML(elementId = 'changeme', html = './pages/ValClient.html') {
+function includeHTML(elementId = 'changeme', html = './pages/Introduced.html') {
     let thatElement = document.getElementById(elementId);
 
     const xhttp = new XMLHttpRequest();
@@ -19,4 +19,4 @@ function includeHTML(elementId = 'changeme', html = './pages/ValClient.html') {
     xhttp.send();
 }
 
-includeHTML('changeme', './pages/ValClient.html');
+includeHTML('changeme', './pages/Introduced.html');
