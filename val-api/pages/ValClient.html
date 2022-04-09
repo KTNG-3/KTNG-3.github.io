@@ -31,7 +31,7 @@
     <p>After Login The <strong>Verify Code</strong> Will Send To Mail</p>
 
     <code class="language-javascript" id="code_full">
-        const VerifyCode = 123456;<span class="hljs-comment"> // &#60;---------- Example Verify Code</span>
+        const VerifyCode = 123456;<span class="hljs-comment"> // &#60;---------- Verify Code</span>
         <br>
         const ValAuth_Multifactor = await ValApi.Auth.Multifactor.verify(ValAuth_Account, VerifyCode);
     </code>
@@ -41,10 +41,10 @@
 
     <p>After We Get <strong>Account</strong>, Then We Will Create an <strong>API Client</strong></p>
 
-    <pre class="lang-javascript" id="code_full">
+    <pre class="language-javascript" id="code_full">
 const ValAPI_Client = new ValApi.ValClient({
     Account: ValAuth_Multifactor,<span class="hljs-comment">  // Use <em>ValAuth_Account</em> When It Isn't use Multifactor</span>
-    Region: "ap",<span class="hljs-comment">  // &#60;---------- Example Region</span>
+    Region: "ap",<span class="hljs-comment">  // &#60;---------- Region</span>
 });</pre>
 
 
@@ -61,11 +61,11 @@ const ValAPI_Client = new ValApi.ValClient({
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Region</td>
+                        <td><strong>Region</strong></td>
                         <td>setRegion<em>(region)</em></td>
                     </tr>
                     <tr>
-                        <td>Client&nbsp;Platfrom</td>
+                        <td><strong>Client&nbsp;Platfrom</strong></td>
                         <td>setClientPlatfrom_fromJSON<em>(clientPlatfrom)</em></td>
                     </tr>
                     <tr>
@@ -73,7 +73,7 @@ const ValAPI_Client = new ValApi.ValClient({
                         <td>setClientPlatfrom_from64<em>(clientPlatfrom)</em></td>
                     </tr>
                     <tr>
-                        <td>Client&nbsp;Version</td>
+                        <td><strong>Client&nbsp;Version</strong></td>
                         <td>setClientVersion<em>(clientVersion)</em></td>
                     </tr>
                 </tbody>
@@ -120,164 +120,164 @@ const ValAPI_Client = new ValApi.ValClient({
         </thead>
         <tbody>
             <tr>
-                <td>Client</td>
-                <td>GetSession(puuid)</td>
+                <td><strong>Client</strong></td>
+                <td>GetSession<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchContent()</td>
+                <td>FetchContent<em>()</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchConfig()</td>
+                <td>FetchConfig<em>()</em></td>
             </tr>
             <tr>
-                <td>Contract</td>
-                <td>DefinitionsFetch()</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Fetch(puuid)</td>
+                <td><strong>Contract</strong></td>
+                <td>DefinitionsFetch<em>()</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>Activate(puuid, contractId)</td>
-            </tr>
-            <tr>
-                <td>CurrentGame</td>
-                <td>FetchMatch(matchId)</td>
+                <td>Fetch<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchMatchLoadouts(matchId)</td>
+                <td>Activate<em>(puuid,&nbsp;contractId)</em></td>
+            </tr>
+            <tr>
+                <td><strong>CurrentGame</strong></td>
+                <td>FetchMatch<em>(matchId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchPlayer(puuid)</td>
+                <td>FetchMatchLoadouts<em>(matchId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>DisassociatePlayer(puuid, matchId)</td>
-            </tr>
-            <tr>
-                <td>Match</td>
-                <td>FetchMatchDetails(matchId)</td>
+                <td>FetchPlayer<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchMatchHistory(puuid,&nbsp;queueId?,&nbsp;startIndex?,&nbsp;endIndex?)</td>
+                <td>DisassociatePlayer<em>(puuid,&nbsp;matchId)</em></td>
             </tr>
             <tr>
-                <td>Party</td>
-                <td>FetchCustomGameConfigs()</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>FetchParty(partyId)</td>
+                <td><strong>Match</strong></td>
+                <td>FetchMatchDetails<em>(matchId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchPlayer(puuid)</td>
+                <td>FetchMatchHistory<em>(puuid,&nbsp;queueId?,&nbsp;startIndex?,&nbsp;endIndex?)</em></td>
+            </tr>
+            <tr>
+                <td><strong>Party</strong></td>
+                <td>FetchCustomGameConfigs<em>()</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>ChangeQueue(partyId,&nbsp;queueId)</td>
+                <td>FetchParty<em>(partyId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>EnterMatchmakingQueue(partyId)</td>
+                <td>FetchPlayer<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>InviteToPartyByDisplayName(partyId,&nbsp;gameName,&nbsp;tagLine)</td>
+                <td>ChangeQueue<em>(partyId,&nbsp;queueId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>LeaveMatchmakingQueue(partyId)</td>
+                <td>EnterMatchmakingQueue<em>(partyId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>SetAccessibility(partyId,&nbsp;accessibility)</td>
+                <td>InviteToPartyByDisplayName<em>(partyId,&nbsp;gameName,&nbsp;tagLine)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>StartCustomGame(partyId)</td>
+                <td>LeaveMatchmakingQueue<em>(partyId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>LeaveParty(puuid,&nbsp;partyId)</td>
+                <td>SetAccessibility<em>(partyId,&nbsp;accessibility)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>LeaveQueue(partyId)</td>
-            </tr>
-            <tr>
-                <td>Player</td>
-                <td>GetUsername(puuid)</td>
+                <td>StartCustomGame<em>(partyId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>GetUserInfo()</td>
+                <td>LeaveParty<em>(puuid,&nbsp;partyId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchPlayer(puuid)</td>
+                <td>LeaveQueue<em>(partyId)</em></td>
+            </tr>
+            <tr>
+                <td><strong>Player</strong></td>
+                <td>GetUsername<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchCompetitiveUpdates(puuid,&nbsp;queueId?,&nbsp;startIndex?,&nbsp;endIndex?)</td>
+                <td>GetUserInfo<em>()</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>Loadout(puuid)</td>
+                <td>FetchPlayer<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>AccountXP(puuid)</td>
+                <td>FetchCompetitiveUpdates<em>(puuid,&nbsp;queueId?,&nbsp;startIndex?,&nbsp;endIndex?)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>FetchRestrictions()</td>
-            </tr>
-            <tr>
-                <td>PreGame</td>
-                <td>GetMatch(matchId)</td>
+                <td>Loadout<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>GetMatchLoadouts(matchId)</td>
+                <td>AccountXP<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>GetPlayer(puuid)</td>
+                <td>FetchRestrictions<em>()</em></td>
+            </tr>
+            <tr>
+                <td><strong>PreGame</strong></td>
+                <td>GetMatch<em>(matchId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>LockCharacter(matchId,&nbsp;agentId)</td>
+                <td>GetMatchLoadouts<em>(matchId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>QuitMatch(matchId)</td>
+                <td>GetPlayer<em>(puuid)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>SelectCharacter(matchId,&nbsp;agentId)</td>
-            </tr>
-            <tr>
-                <td>Store</td>
-                <td>GetEntitlements(puuid,&nbsp;itemTypeId)</td>
+                <td>LockCharacter<em>(matchId,&nbsp;agentId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>GetOffers()</td>
+                <td>QuitMatch<em>(matchId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>GetStorefront(puuid)</td>
+                <td>SelectCharacter<em>(matchId,&nbsp;agentId)</em></td>
+            </tr>
+            <tr>
+                <td><strong>Store</strong></td>
+                <td>GetEntitlements<em>(puuid,&nbsp;itemTypeId)</em></td>
             </tr>
             <tr>
                 <td></td>
-                <td>GetWallet(puuid)</td>
+                <td>GetOffers<em>()</em></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetStorefront<em>(puuid)</em></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>GetWallet<em>(puuid)</em></td>
             </tr>
         </tbody>
     </table>

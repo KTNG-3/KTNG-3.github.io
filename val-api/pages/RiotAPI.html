@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@ing3kth/val-api Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../docs.css">
+</head>
+
+<body>
+
+    <h1>Riot Games API</h1>
+    <hr>
+
+    <p>Official Api From Riot Games</p>
+
+    <pre class="language-javascript" id="code_full">
+const RiotApi_Client = new ValApi.RiotApi({
+    key: 'API-KEY-123',<span class="hljs-comment">  // &#60;---------- API Key</span>
+    region: 'na',<span class="hljs-comment">  // &#60;---------- Region</span>
+})</pre>
+
+    <p>You Can Get Api Key From <a href="https://developer.riotgames.com/">developer.riotgames.com</a> </p>
+
+
+    <details>
+        <summary style="font-size: x-large;">Settings</summary>
+
+        <blockquote>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Set</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Region</td>
+                        <td>setRegion<em>(region)</em></td>
+                    </tr>
+                    <tr>
+                        <td>API&nbsp;Key</td>
+                        <td>setApiKey<em>(key)</em></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <code class="language-javascript" id="code_full">
+                RiotApi_Client.{Function}
+            </code>
+
+        </blockquote>
+
+    </details>
+
+    <details>
+        <summary style="font-size: x-large;">Saves</summary>
+
+        <blockquote>
+            <strong>Account &#8594; Save</strong>
+
+            <code class="language-javascript" id="code_full">
+                const Save_RiotApi = RiotApi_Client.toJSON();
+            </code>
+
+            <strong>Save &#8594; Account</strong>
+
+            <code class="language-javascript" id="code_full">
+                const RiotApi_Client = ValApi.ValClient.fromJSON(Save_RiotApi);
+            </code>
+        </blockquote>
+
+    </details>
+
+    <h2>API</h2>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Function</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>AccountV1</strong></td>
+                <td>ByRiotId<em>(gameName,&nbsp;tagLine)</em></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ByPuuid<em>(puuid)</em></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ByGame<em>(puuid,&nbsp;game?)</em></td>
+            </tr>
+            <tr>
+                <td><strong>ContentV1</strong></td>
+                <td>Contents<em>(locale?)</em></td>
+            </tr>
+            <tr>
+                <td><strong>StatusV1</strong></td>
+                <td>PlatformData<em>()</em></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

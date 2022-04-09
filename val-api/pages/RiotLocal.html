@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@ing3kth/val-api Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../docs.css">
+</head>
+
+<body>
+
+    <h1>Riot Local API</h1>
+    <hr>
+
+    <p>This API is used differently from other APIs Because it has a lot of <em>endpoints.</em> And I am lazy to do all of them.</p>
+
+    <p>This API changes when <strong>Riot Client</strong> restart and is not the same on any devices.</p>
+
+    <code class="language-javascript" id="code_full">
+        const LocalApi_Client = await new ValApi.RiotLocal();
+    </code>
+
+    <details>
+        <summary style="font-size: x-large;">Settings</summary>
+
+        <blockquote>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Set</th>
+                        <th>Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IP</td>
+                        <td>setIp<em>(ip?)</em></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <code class="language-javascript" id="code_full">
+                LocalApi_Client.{Function}
+            </code>
+
+        </blockquote>
+ 
+    </details>
+
+    <h2>API</h2>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Function</th>
+                <th>Args..</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Chat</strong></td>
+                <td>All Chat History</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>All&nbsp;Chat&nbsp;Info</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>All&nbsp;Chat&nbsp;Participants</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Game&nbsp;Chat&nbsp;Info</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Party&nbsp;Chat&nbsp;Info</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Pregame&nbsp;Chat&nbsp;Info</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Specific&nbsp;Chat&nbsp;History</td>
+                <td>Chat ID</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>TEXT_CHAT_RNet_FetchParticipants</td>
+                <td>Chat ID</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Send&nbsp;Chat</td>
+                <td>Chat&nbsp;ID,&nbsp;Message</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Send&nbsp;Whisper</td>
+                <td>Chat&nbsp;ID,&nbsp;Message</td>
+            </tr>
+            <tr>
+                <td><strong>Main</strong></td>
+                <td>CHATFRIENDS_RNet_GET_ALL</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>FRIENDS_RNet_FetchFriendRequests</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Local&nbsp;Help</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>PRESENCE_RNet_GET_ALL</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>PlayerAlias_RNet_GetActiveAlias</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RSO&nbsp;Auth&nbsp;User&nbsp;Info</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RSO_RNet_GetEntitlementsToken</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Riot&nbsp;Client&nbsp;Region</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RiotClientSession_FetchSessions</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RiotKV_RNet_GetSettings</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RiotKV_RNet_GetSettingsTEXT_CHAT_RNet_FetchSession</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>More</strong></td>
+                <td>ANTI_ADDICTION_RNet_FetchShutdownPolicyState</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>ANTI_ADDICTION_RNet_FetchWarningMessagePolicyState</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>CLIENTCONFIG_RNET_GET_ValorantClientConfig</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LEGAL_INFO_RNet_EULA</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LEGAL_INFO_RNet_Privacy</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LOCALE_RNet_FetchAvailableLocales</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>LOCALE_RNet_FetchLocale</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Local&nbsp;Swagger&nbsp;Docs</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>REPORTER_FEEDBACK_RNet_GetReporterFeedback</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RIOT_WARNING_RNet_GetRiotWarning</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RSO_RNet_FetchClientAuthorizations</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RSO_RNet_GetAccessToken</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RSO_RNet_GetUserInfoToken</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Riot&nbsp;Client&nbsp;Command-Line&nbsp;Args</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RiotStatus_RNet_FetchStatus</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>TEXT_CHAT_RNet_FetchSettings</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>TEXT_CHAT_RNet_GetMUCInfos&nbsp;-&nbsp;coregame</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>TEXT_CHAT_RNet_GetMUCInfos&nbsp;-&nbsp;parties</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>TEXT_CHAT_RNet_GetMUCInfos&nbsp;-&nbsp;pregame</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>TEXT_CHAT_RNet_GetMUCInfos&nbsp;-&nbsp;tournaments</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>URNetClient_CheckPluginStatus</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>URNetClient_CheckRMSSession</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>URNetClient_GetProcessInfo</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>VOICE_CHAT_RNet_FetchAudioProperties</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>VOICE_CHAT_RNet_FetchCaptureDevices</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>VOICE_CHAT_RNet_FetchPTTSettings</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>VOICE_CHAT_RNet_FetchRenderDevices</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>VOICE_CHAT_RNet_FetchSessions</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>VOICE_CHAT_RNet_FetchSettings</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Valorant&nbsp;Log&nbsp;Path</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <code class="language-javascript" id="code_full">
+        await LocalApi_Client.requestFromJSON(LocalApi_Client.resourse.{Service}[{Function}], Args..)
+        <br>
+        <span class="hljs-comment">// When <em>Args..</em> is empty, omit it.</span>
+    </code>
+
+</body>
+
+</html>
