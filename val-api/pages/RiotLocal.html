@@ -35,8 +35,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>IP</td>
+                        <td><strong>IP</strong></td>
                         <td>setIp<em>(ip?)</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lockfile</strong></td>
+                        <td>setLockfileName<em>(name?)</em></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>setLockfilePid<em>(pid)</em></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>setLockfilePort<em>(port)</em></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>setLockfilePassword<em>(password)</em></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>setLockfileProtocol<em>(protocol?)</em></td>
                     </tr>
                 </tbody>
             </table>
@@ -49,6 +69,25 @@
 
         </blockquote>
  
+    </details>
+
+    <details>
+        <summary style="font-size: x-large;">Saves</summary>
+
+        <blockquote>
+            <strong>Account &#8594; Save</strong>
+
+            <code class="language-javascript" id="code_full">
+                const Save_RiotLocal = LocalApi_Client.toJSON();
+            </code>
+
+            <strong>Save &#8594; Account</strong>
+
+            <code class="language-javascript" id="code_full">
+                const LocalApi_Client = ValApi.RiotLocal.fromJSON(Save_RiotLocal);
+            </code>
+        </blockquote>
+
     </details>
 
     <h2>API</h2>
