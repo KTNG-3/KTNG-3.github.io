@@ -1,7 +1,7 @@
 {   
     "lastupdated": "1501078983",
     "npm": {
-        "valorant-api": {
+        "val-api": {
             "name": "@ing3kth/val-api",
             "version": "1.5.5",
             "webpage": {
@@ -11,7 +11,7 @@
             "released": true,
             "public": true
         },
-        "npm-core": {
+        "core": {
             "name": "@ing3kth/core",
             "version": "1.7.0",
             "webpage": {
