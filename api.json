@@ -1,5 +1,4 @@
 {   
-    "lastupdated": "1501078983",
     "npm": {
         "val-api": {
             "name": "@ing3kth/val-api",
@@ -31,5 +30,5 @@
             "released": true,
             "public": false
         }
-    }
+    },
 }
