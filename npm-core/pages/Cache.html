@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@ing3kth/core Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../docs.css">
+</head>
+
+<body>
+
+    <h1>Cache</h1>
+    <hr>
+
+    <p>Cache Data in JSON format.</p>
+
+    <code class="language-bash" id="code_full">
+        const CacheData = await new IngCore.Core.Cache('NAME_HERE');
+    </code>
+
+    <h4>Input Data</h4>
+
+    <code class="language-bash" id="code_full">
+        const insertData = await CacheData.input(DATA_HERE);
+        <br>
+        <br>
+        const interactionId = insertData.interactionId;
+    </code>
+
+    <h4>Get Data</h4>
+
+    <code class="language-bash" id="code_full">
+        IngCore.Core.Cache.output(insertData);
+    </code>
+
+    <h4>Clear Old Data</h4>
+
+    <code class="language-bash" id="code_full">
+        await CacheData.clear(interactionId);
+    </code>
+
+</body>
+
+</html>
