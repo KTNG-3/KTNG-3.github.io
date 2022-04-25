@@ -12,7 +12,7 @@
         },
         "core": {
             "name": "@ing3kth/core",
-            "version": "1.7.2",
+            "version": "1.8.0",
             "webpage": {
                 "npm": "https://www.npmjs.com/package/@ing3kth/core",
                 "github": "https://github.com/KTNG-3/npm-core"
