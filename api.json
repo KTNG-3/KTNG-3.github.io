@@ -2,7 +2,7 @@
     "npm": {
         "val-api": {
             "name": "@ing3kth/val-api",
-            "version": "1.5.7",
+            "version": "1.6.0",
             "webpage": {
                 "npm": "https://www.npmjs.com/package/@ing3kth/val-api",
                 "github": "https://github.com/KTNG-3/val-api"
@@ -12,7 +12,7 @@
         },
         "core": {
             "name": "@ing3kth/core",
-            "version": "1.8.0",
+            "version": "1.8.2",
             "webpage": {
                 "npm": "https://www.npmjs.com/package/@ing3kth/core",
                 "github": "https://github.com/KTNG-3/npm-core"
