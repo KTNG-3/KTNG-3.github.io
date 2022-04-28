@@ -42,10 +42,10 @@
     <p>After We Get <strong>Account</strong>, Then We Will Create an <strong>API Client</strong></p>
 
     <pre class="language-javascript" id="code_full">
-const ValAPI_Client = new ValApi.ValClient({
-    Account: ValAuth_Multifactor,<span class="hljs-comment">  // Use <em>ValAuth_Account</em> When It Isn't use Multifactor</span>
-    Region: "ap",<span class="hljs-comment">  // &#60;---------- Region</span>
-});</pre>
+const ValAPI_Client = new ValApi.ValClient(
+    ValAuth_Multifactor,<span class="hljs-comment">  // Use <em>ValAuth_Account</em> When It Isn't use Multifactor</span>
+    "Asia_Pacific"<span class="hljs-comment">  // &#60;---------- Region</span>
+);</pre>
 
 
     <details>
@@ -202,6 +202,14 @@ const ValAPI_Client = new ValApi.ValClient({
             <tr>
                 <td></td>
                 <td>StartCustomGame<em>(partyId)</em></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>RemovePlayer<em>(puuid)</em></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>DeclineRequest<em>(puuid, requestId)</em></td>
             </tr>
             <tr>
                 <td></td>

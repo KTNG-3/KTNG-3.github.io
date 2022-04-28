@@ -23,13 +23,13 @@
     <h4>Input Data</h4>
 
     <code class="language-bash" id="code_full">
-        const insertData = await LogData.log(DATA_HERE);
+        await LogData.log(DATA_HERE);
     </code>
 
     <h4>Get Data</h4>
 
     <code class="language-bash" id="code_full">
-        IngCore.Core.Cache.get();
+        const LogDatas = await IngCore.Core.Logs.get();
     </code>
 
 </body>
