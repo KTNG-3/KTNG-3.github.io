@@ -18,8 +18,19 @@
 
     <p>This API changes when <strong>Riot Client</strong> restart and is not the same on any devices.</p>
 
+    <h3>Authentication</h3>
+
+    We will add more authentication methods later.
+
     <code class="language-javascript" id="code_full">
-        const LocalApi_Client = await new ValApi.RiotLocal();
+        const LocalApi_Auth = ValApi.RiotLocal.Auth.lockfile();
+    </code>
+
+    <h2>Client</h2>
+    <hr>
+
+    <code class="language-javascript" id="code_full">
+        const LocalApi_Client = await new ValApi.RiotLocal(LocalApi_Auth);
     </code>
 
     <details>
