@@ -19,7 +19,7 @@
     <p>First We Need To <strong>Login</strong> To <code id="code_small">Valorant Account</code></p>
 
     <code class="language-javascript" id="code_full">
-        const ValAuth_Account = await ValApi.Auth.Account.login('USERNAME', 'PASSWORD');
+        const ValAuth_Account = await ValApi.ValClient.Auth.login('USERNAME', 'PASSWORD');
     </code>
 
     <em>But We Have 2 Type Of Account</em>
@@ -33,7 +33,7 @@
     <code class="language-javascript" id="code_full">
         const VerifyCode = 123456;<span class="hljs-comment"> // &#60;---------- Verify Code</span>
         <br>
-        const ValAuth_Multifactor = await ValApi.Auth.Multifactor.verify(ValAuth_Account, VerifyCode);
+        const ValAuth_Multifactor = await ValApi.ValClient.Auth.verify(ValAuth_Account, VerifyCode);
     </code>
 
     <h2>Client</h2>
@@ -43,8 +43,7 @@
 
     <pre class="language-javascript" id="code_full">
 const ValAPI_Client = new ValApi.ValClient(
-    ValAuth_Multifactor,<span class="hljs-comment">  // Use <em>ValAuth_Account</em> When It Isn't use Multifactor</span>
-    "Asia_Pacific"<span class="hljs-comment">  // &#60;---------- Region</span>
+    ValAuth_Multifactor,<span class="hljs-comment">  // Use <code id="code_small"><em>ValAuth_Account</em></code> When It Isn't use Multifactor</span>
 );</pre>
 
 
